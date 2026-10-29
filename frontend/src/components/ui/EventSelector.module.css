@@ -1,0 +1,70 @@
+/* EventSelector.module.css */
+.eventSelectorContainer {
+  width: 100%;
+  max-width: 360px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 16px;
+  padding: 0.9rem 1rem;
+  background: linear-gradient(135deg, rgba(255,255,255,0.96), rgba(248,250,252,0.95));
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.eventSelectorHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.6rem;
+}
+
+.eventLabel {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.eventHint {
+  margin-top: 0.2rem;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.eventBadge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.28rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1d4ed8;
+  background: #dbeafe;
+}
+
+.selectWrapper {
+  position: relative;
+}
+
+.eventSelect {
+  width: 100%;
+  border: 1px solid #dbe4f0;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.95rem;
+  color: #111827;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3e%3cpath%20fill='%23666'%20d='M2%200L0%202h4z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  background-size: 0.7rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.eventSelect:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}

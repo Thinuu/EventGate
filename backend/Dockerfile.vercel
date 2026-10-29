@@ -1,0 +1,10 @@
+FROM node:24-bookworm-slim
+ENV NODE_ENV=production PORT=80
+WORKDIR /app
+COPY package*.json ./
+COPY vendor ./vendor
+RUN npm ci --omit=dev --no-audit --no-fund
+COPY src ./src
+USER node
+EXPOSE 80
+CMD ["node", "src/container.cjs"]

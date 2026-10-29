@@ -1,0 +1,20 @@
+name: Event maintenance
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  maintenance:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Run authenticated maintenance
+        run: python3 backend/scripts/run-maintenance.py
+        env:
+          EAMS_URL: ${{ vars.EAMS_URL }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}

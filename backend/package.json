@@ -1,0 +1,65 @@
+{
+  "name": "entrynex-backend",
+  "version": "1.0.0",
+  "description": "Event Access Management System - Backend API",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "seed": "node src/utils/seed.js",
+    "migrate:seed-email": "node scripts/migrations/seed_email_and_event_defaults.js",
+    "clear": "node src/utils/clear.js",
+    "test": "node --test test/*.test.js",
+    "check": "node scripts/check-syntax.js",
+    "test:integration": "node --test test/*.integration.js",
+    "db:indexes": "node scripts/ensure-indexes.js",
+    "admin:create": "node scripts/create-admin.js"
+  },
+  "dependencies": {
+    "@azure-rest/ai-vision-face": "^1.0.0-beta.3",
+    "@azure/core-auth": "^1.11.0",
+    "@azure/storage-blob": "^12.33.0",
+    "@socket.io/mongo-adapter": "^0.4.0",
+    "@vercel/functions": "3.6.1",
+    "axios": "^1.21.0",
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "exceljs": "^4.4.0",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "express-validator": "^7.0.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.3",
+    "morgan": "^1.10.0",
+    "multer": "^2.5.0",
+    "node-schedule": "^2.1.1",
+    "nodemailer": "^10.2.1",
+    "otplib": "^12.0.1",
+    "pdfkit": "^0.18.0",
+    "qrcode": "^1.5.4",
+    "sharp": "^0.35.5",
+    "socket.io": "^4.8.3",
+    "stripe": "^23.0.1",
+    "swagger-ui-express": "^5.0.1",
+    "twilio": "^5.10.2",
+    "uuid": "file:vendor/uuid"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^11.3.0",
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=22.12 <25"
+  },
+  "type": "commonjs",
+  "overrides": {
+    "qs": "^6.17.0",
+    "exceljs": {
+      "uuid": "$uuid"
+    }
+  }
+}

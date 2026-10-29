@@ -1,0 +1,10 @@
+**/node_modules
+**/build
+**/dist
+**/__pycache__
+**/.env
+**/.env.local
+**/*.log
+backend/uploads
+frontend/src/pages/admin/admin.js
+frontend/src/pages/admin/verification.js

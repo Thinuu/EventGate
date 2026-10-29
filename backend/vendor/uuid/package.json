@@ -1,0 +1,1 @@
+{"name":"uuid","version":"14.0.3","main":"index.js","type":"commonjs","description":"Application-local UUID v4 compatibility shim using Node crypto; only v4 is supported"}
